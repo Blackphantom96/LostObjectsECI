@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.samples.managebeans;
+package co.edu.escuelaing.is.labinfo.samples.managebeans;
 
-import edu.eci.pdsw.samples.entities.Eps1;
-import edu.eci.pdsw.samples.services.ExcepcionServiciosPacientes;
-import edu.eci.pdsw.samples.services.ServiciosHistorialPacientesFactory;
-import edu.eci.pdsw.samples.services.ServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
+import co.edu.escuelaing.is.labinfo.samples.services.ExcepcionServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.samples.services.ServiciosHistorialPacientesFactory;
+import co.edu.escuelaing.is.labinfo.samples.services.ServiciosPacientes;
 
 import java.io.Serializable;
 import java.util.Date;

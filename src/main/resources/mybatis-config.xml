@@ -9,7 +9,7 @@
     </settings>
     
     <typeAliases>
-        <typeAlias type='edu.eci.pdsw.samples.entities.Eps1' alias='Eps'/>
+        <typeAlias type='co.edu.escuelaing.is.labinfo.samples.entities.Eps1' alias='Eps'/>
     </typeAliases>
                          
     <environments default="development">

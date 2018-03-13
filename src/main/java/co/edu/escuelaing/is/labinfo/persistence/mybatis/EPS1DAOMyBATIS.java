@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.persistence.mybatis;
+package co.edu.escuelaing.is.labinfo.persistence.mybatis;
 
 import com.google.inject.Inject;
-import edu.eci.pdsw.persistence.EPS1DAO;
-import edu.eci.pdsw.persistence.PersistenceException;
-import edu.eci.pdsw.persistence.mappers.Eps1Mapper;
-import edu.eci.pdsw.samples.entities.Eps1;
+import co.edu.escuelaing.is.labinfo.persistence.EPS1DAO;
+import co.edu.escuelaing.is.labinfo.persistence.PersistenceException;
+import co.edu.escuelaing.is.labinfo.persistence.mappers.Eps1Mapper;
+import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.samples.entities;
+package co.edu.escuelaing.is.labinfo.samples.entities;
 
-import edu.eci.pdsw.samples.managebeans.RegistroConsultaBean;
-import edu.eci.pdsw.samples.services.ExcepcionServiciosPacientes;
-import edu.eci.pdsw.samples.services.ServiciosHistorialPacientesFactory;
-import edu.eci.pdsw.samples.services.ServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.samples.managebeans.RegistroConsultaBean;
+import co.edu.escuelaing.is.labinfo.samples.services.ExcepcionServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.samples.services.ServiciosHistorialPacientesFactory;
+import co.edu.escuelaing.is.labinfo.samples.services.ServiciosPacientes;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.component.UIComponent;

@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.samples.services;
+package co.edu.escuelaing.is.labinfo.samples.services;
 
 import com.google.inject.AbstractModule;
 import static com.google.inject.Guice.createInjector;
 import com.google.inject.Injector;
-import edu.eci.pdsw.persistence.EPS1DAO;
-import edu.eci.pdsw.persistence.mybatis.EPS1DAOMyBATIS;
-import edu.eci.pdsw.samples.services.impl.ServiciosPacienteImpl;
+import co.edu.escuelaing.is.labinfo.persistence.EPS1DAO;
+import co.edu.escuelaing.is.labinfo.persistence.mybatis.EPS1DAOMyBATIS;
+import co.edu.escuelaing.is.labinfo.samples.services.impl.ServiciosPacienteImpl;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
 

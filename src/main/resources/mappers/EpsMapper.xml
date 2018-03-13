@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="edu.eci.pdsw.persistence.mappers.Eps1Mapper">
+<mapper namespace="co.edu.escuelaing.is.labinfo.persistence.mappers.Eps1Mapper">
     <select parameterType="map"  id="loadAllEPS" resultMap="EpsResult">
         Select * from Objects
     </select>

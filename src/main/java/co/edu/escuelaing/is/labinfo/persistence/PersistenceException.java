@@ -14,30 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package edu.eci.pdsw.samples.services;
-
-
-import edu.eci.pdsw.samples.entities.Eps1;
-import java.util.Date;
-
-import java.util.List;
+package co.edu.escuelaing.is.labinfo.persistence;
 
 /**
  *
  * @author hcadavid
  */
-public interface ServiciosPacientes {
-    
+public class PersistenceException extends Exception {
 
-    /**
-     * Obtiene todas las EPSs registradas en el sistema
-     * @return Lista con todas las EPSs registradas.
-     * @throws ExcepcionServiciosPacientes si se presenta algún error lógico
-     * o de persistencia.
-     */
-    public abstract List<Eps1> obtenerEPSsRegistradas() throws ExcepcionServiciosPacientes;
+    public PersistenceException() {
+    }
+
+    public PersistenceException(String message) {
+        super(message);
+    }
+
+    public PersistenceException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public PersistenceException(Throwable cause) {
+        super(cause);
+    }
     
-    public abstract void insertEps(Eps1 e) throws ExcepcionServiciosPacientes;
-    
-    public abstract void updateEps(Eps1 e) throws ExcepcionServiciosPacientes;
 }

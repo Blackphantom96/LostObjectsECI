@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.samples.services.impl;
+package co.edu.escuelaing.is.labinfo.samples.services.impl;
 
 import com.google.inject.Inject;
-import edu.eci.pdsw.persistence.EPS1DAO;
-import edu.eci.pdsw.persistence.PersistenceException;
-import edu.eci.pdsw.samples.entities.Eps1;
-import edu.eci.pdsw.samples.services.ExcepcionServiciosPacientes;
-import edu.eci.pdsw.samples.services.ServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.persistence.EPS1DAO;
+import co.edu.escuelaing.is.labinfo.persistence.PersistenceException;
+import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
+import co.edu.escuelaing.is.labinfo.samples.services.ExcepcionServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.samples.services.ServiciosPacientes;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

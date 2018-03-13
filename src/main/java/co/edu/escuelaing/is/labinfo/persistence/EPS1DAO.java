@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.persistence;
+package co.edu.escuelaing.is.labinfo.persistence;
 
-import edu.eci.pdsw.samples.entities.Eps1;
+import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
 import java.util.List;
 /**
  *

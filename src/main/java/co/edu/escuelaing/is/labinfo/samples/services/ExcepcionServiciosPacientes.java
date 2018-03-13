@@ -14,26 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package edu.eci.pdsw.persistence;
+package co.edu.escuelaing.is.labinfo.samples.services;
 
 /**
  *
  * @author hcadavid
  */
-public class PersistenceException extends Exception {
+public class ExcepcionServiciosPacientes extends Exception {
 
-    public PersistenceException() {
+    public ExcepcionServiciosPacientes() {
     }
 
-    public PersistenceException(String message) {
+    public ExcepcionServiciosPacientes(String message) {
         super(message);
     }
 
-    public PersistenceException(String message, Throwable cause) {
+    public ExcepcionServiciosPacientes(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public PersistenceException(Throwable cause) {
+    public ExcepcionServiciosPacientes(Throwable cause) {
         super(cause);
     }
     

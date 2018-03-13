@@ -14,27 +14,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package edu.eci.pdsw.samples.services;
+package co.edu.escuelaing.is.labinfo.samples.services;
+
+
+import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
+import java.util.Date;
+
+import java.util.List;
 
 /**
  *
  * @author hcadavid
  */
-public class ExcepcionServiciosPacientes extends Exception {
-
-    public ExcepcionServiciosPacientes() {
-    }
-
-    public ExcepcionServiciosPacientes(String message) {
-        super(message);
-    }
-
-    public ExcepcionServiciosPacientes(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public ExcepcionServiciosPacientes(Throwable cause) {
-        super(cause);
-    }
+public interface ServiciosPacientes {
     
+
+    /**
+     * Obtiene todas las EPSs registradas en el sistema
+     * @return Lista con todas las EPSs registradas.
+     * @throws ExcepcionServiciosPacientes si se presenta algún error lógico
+     * o de persistencia.
+     */
+    public abstract List<Eps1> obtenerEPSsRegistradas() throws ExcepcionServiciosPacientes;
+    
+    public abstract void insertEps(Eps1 e) throws ExcepcionServiciosPacientes;
+    
+    public abstract void updateEps(Eps1 e) throws ExcepcionServiciosPacientes;
 }

@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.pdsw.persistence.mappers;
-import edu.eci.pdsw.samples.entities.Eps1;
+package co.edu.escuelaing.is.labinfo.persistence.mappers;
+import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
 import java.util.Date;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
