@@ -8,23 +8,23 @@ package co.edu.escuelaing.is.labinfo.samples.services;
 import com.google.inject.AbstractModule;
 import static com.google.inject.Guice.createInjector;
 import com.google.inject.Injector;
-import co.edu.escuelaing.is.labinfo.persistence.EPS1DAO;
-import co.edu.escuelaing.is.labinfo.persistence.mybatis.EPS1DAOMyBATIS;
-import co.edu.escuelaing.is.labinfo.samples.services.impl.ServiciosPacienteImpl;
+import co.edu.escuelaing.is.labinfo.persistence.ObjetoDAO;
+import co.edu.escuelaing.is.labinfo.persistence.mybatis.ObjetoDAOMyBATIS;
+import co.edu.escuelaing.is.labinfo.samples.services.impl.ServiciosImpl;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
 
 /**
  *
- * @author hcadavid
+ * @author BlackPhantom96
  */
-public class ServiciosHistorialPacientesFactory {
+public class ServiciosHistorialFactory {
 
-    private static final ServiciosHistorialPacientesFactory instance = new ServiciosHistorialPacientesFactory();
+    private static final ServiciosHistorialFactory instance = new ServiciosHistorialFactory();
 
     private static Injector injector;
 
-    public ServiciosHistorialPacientesFactory() {
+    public ServiciosHistorialFactory() {
 
         injector = createInjector(new XMLMyBatisModule() {
 
@@ -32,9 +32,9 @@ public class ServiciosHistorialPacientesFactory {
             protected void initialize() {
                 install(JdbcHelper.MySQL);
                 setClassPathResource("mybatis-config.xml");
-                bind(ServiciosPacientes.class).to(ServiciosPacienteImpl.class);
-                bind(EPS1DAO.class).to(EPS1DAOMyBATIS.class);
-                //bind(PacienteDAO.class).to(PacienteDAOMyBATIS.class);
+                bind(Servicios.class).to(ServiciosImpl.class);
+                bind(ObjetoDAO.class).to(ObjetoDAOMyBATIS.class);
+                //bind(DAO.class).to(DAOMyBATIS.class);
             }
 
         }
@@ -43,11 +43,11 @@ public class ServiciosHistorialPacientesFactory {
 
     }
 
-    public ServiciosPacientes getServiciosPaciente() {
-        return injector.getInstance(ServiciosPacientes.class);
+    public Servicios getServicios() {
+        return injector.getInstance(Servicios.class);
     }
 
-    public static ServiciosHistorialPacientesFactory getInstance() {
+    public static ServiciosHistorialFactory getInstance() {
         return instance;
     }
 

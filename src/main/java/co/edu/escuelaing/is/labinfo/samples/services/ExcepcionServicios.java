@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 hcadavid
+ * Copyright (C) 2015 BlackPhantom96
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,22 +18,22 @@ package co.edu.escuelaing.is.labinfo.samples.services;
 
 /**
  *
- * @author hcadavid
+ * @author BlackPhantom96
  */
-public class ExcepcionServiciosPacientes extends Exception {
+public class ExcepcionServicios extends Exception {
 
-    public ExcepcionServiciosPacientes() {
+    public ExcepcionServicios() {
     }
 
-    public ExcepcionServiciosPacientes(String message) {
+    public ExcepcionServicios(String message) {
         super(message);
     }
 
-    public ExcepcionServiciosPacientes(String message, Throwable cause) {
+    public ExcepcionServicios(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public ExcepcionServiciosPacientes(Throwable cause) {
+    public ExcepcionServicios(Throwable cause) {
         super(cause);
     }
     

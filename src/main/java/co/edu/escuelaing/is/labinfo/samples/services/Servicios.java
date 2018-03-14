@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 hcadavid
+ * Copyright (C) 2015 BlackPhantom96
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,27 +17,27 @@
 package co.edu.escuelaing.is.labinfo.samples.services;
 
 
-import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
+import co.edu.escuelaing.is.labinfo.samples.entities.Objeto;
 import java.util.Date;
 
 import java.util.List;
 
 /**
  *
- * @author hcadavid
+ * @author BlackPhantom96
  */
-public interface ServiciosPacientes {
+public interface Servicios {
     
 
     /**
-     * Obtiene todas las EPSs registradas en el sistema
-     * @return Lista con todas las EPSs registradas.
-     * @throws ExcepcionServiciosPacientes si se presenta algún error lógico
+     * Obtiene todas las Objetos registradas en el sistema
+     * @return Lista con todas las Objetos registradas.
+     * @throws ExcepcionServicios si se presenta algún error lógico
      * o de persistencia.
      */
-    public abstract List<Eps1> obtenerEPSsRegistradas() throws ExcepcionServiciosPacientes;
+    public abstract List<Objeto> obtenerObjetosRegistradas() throws ExcepcionServicios;
     
-    public abstract void insertEps(Eps1 e) throws ExcepcionServiciosPacientes;
+    public abstract void insertObjeto(Objeto e) throws ExcepcionServicios;
     
-    public abstract void updateEps(Eps1 e) throws ExcepcionServiciosPacientes;
+    public abstract void updateObjeto(Objeto e) throws ExcepcionServicios;
 }

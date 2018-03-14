@@ -6,7 +6,7 @@
     <navigation-rule>
         <from-view-id>/registropacientes.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{RegistroPacientesBean.agregarConsulta}</from-action>
+            <from-action>#{RegistroBean.agregarConsulta}</from-action>
             <from-outcome>case1</from-outcome>
             <to-view-id>/registroconsultas.xhtml</to-view-id>
         </navigation-case>

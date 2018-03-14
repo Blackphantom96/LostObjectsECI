@@ -13,14 +13,14 @@ import java.util.Objects;
  * @author Martin
  */
 
-public class Eps1 {
+public class Objeto {
     private int id;
     private String name,foundBy,reciver,returner,reciverId,description;
     private Date foundDate, returnDate;
 
-    public Eps1(){}
+    public Objeto(){}
     
-    public Eps1(int id, String name, String foundBy, String reciver, String returner, String reciverId, String description, Date foundDate, Date returnDate) {
+    public Objeto(int id, String name, String foundBy, String reciver, String returner, String reciverId, String description, Date foundDate, Date returnDate) {
         this.id = id;
         this.name = name;
         this.foundBy = foundBy;
@@ -122,7 +122,7 @@ public class Eps1 {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Eps1 other = (Eps1) obj;
+        final Objeto other = (Objeto) obj;
         if (this.id != other.id) {
             return false;
         }

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package co.edu.escuelaing.is.labinfo.persistence.mappers;
-import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
+import co.edu.escuelaing.is.labinfo.samples.entities.Objeto;
 import java.util.Date;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
@@ -12,8 +12,8 @@ import org.apache.ibatis.annotations.Param;
  *
  * @author blackphantom
  */
-public interface Eps1Mapper {
-    public List<Eps1> loadAllEPS();
+public interface ObjetoMapper {
+    public List<Objeto> loadAllObjeto();
     public void save(@Param("name") String name, @Param("foundBy") String foundBy, @Param("description") String description,@Param("foundDate") Date foundDate);
-    public void update(@Param("e") Eps1 e);
+    public void update(@Param("e") Objeto e);
 }

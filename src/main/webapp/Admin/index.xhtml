@@ -6,7 +6,7 @@
     <h:head></h:head>
     <h:body>
         <h:form id="table">
-            <p:dataTable id="basicDT" var="x" value="#{HistorialPacientes.eps}">
+            <p:dataTable id="basicDT" var="x" value="#{Historial.objeto}">
                 <f:facet name="header">
                     Objetos Perdidos
                 </f:facet>
@@ -30,57 +30,62 @@
                 </p:column>
                 <p:column headerText="Actualizar" style="text-align: center">
                     <p:commandButton icon="ui-icon-search" title="View" update=":table:ObjectDetail" oncomplete="PF('ObjectDialog').show()">
-                        <f:setPropertyActionListener value="#{x}" target="#{HistorialPacientes.selectEps}" />
+                        <f:setPropertyActionListener value="#{x}" target="#{Historial.selectObjeto}" />
                     </p:commandButton>
                 </p:column>
             </p:dataTable>
             <center>
                 <h:panelGrid columns="2" cellpadding="5">
                     <h:outputLabel for="name" value="Nombre: " style="font-weight:bold"/>
-                    <p:inputText id="name" value="#{HistorialPacientes.temp.name}"/>
+                    <p:inputText id="name" value="#{Historial.temp.name}"/>
 
                     <h:outputLabel for="foundBy" value="Encontrado Por: " style="font-weight:bold"/>
-                    <p:inputText id="foundBy" value="#{HistorialPacientes.temp.foundBy}"/>
+                    <p:inputText id="foundBy" value="#{Historial.temp.foundBy}"/>
 
                     <h:outputLabel for="description" value="Descripcion: " style="font-weight:bold"/>
-                    <p:inputText id="description" value="#{HistorialPacientes.temp.description}"/>
+                    <p:inputText id="description" value="#{Historial.temp.description}"/>
 
                     <h:outputLabel for="foundDate" value="Fecha Encontrado: " style="font-weight:bold"/>
-                    <p:calendar id="foundDate" minHour="7" maxHour="19" stepMinute="30" value="#{HistorialPacientes.temp.foundDate}" pattern="dd-MM-yyyy HH:mm"/>
-                    <p:commandButton value="Agregar" icon="ui-icon-check" update="table" actionListener="#{HistorialPacientes.insert()}"/>
+                    <p:calendar id="foundDate" minHour="7" maxHour="19" stepMinute="30" value="#{Historial.temp.foundDate}" pattern="dd-MM-yyyy HH:mm"/>
+                    
+                    <h:outputText value="Contraseña:" style="font-weight:bold"/>
+                    <p:password value="#{Historial.pass}"/>
+                    <p:commandButton value="Agregar" icon="ui-icon-check" update="table" actionListener="#{Historial.insert()}"/>
                 </h:panelGrid>
 
             </center>
             
             <p:dialog header="Actualizar Objeto" widgetVar="ObjectDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false">
                 <p:outputPanel id="ObjectDetail" style="text-align:center;">
-                    <p:panelGrid  columns="2" rendered="#{not empty HistorialPacientes.selectEps}" columnClasses="label,value">
+                    <p:panelGrid  columns="2" rendered="#{not empty Historial.selectObjeto}" columnClasses="label,value">
                         <h:outputText value="Objeto: "/>
-                        <h:outputText value="#{HistorialPacientes.selectEps.name}"/>
+                        <h:outputText value="#{Historial.selectObjeto.name}"/>
                         
                         <h:outputText value="Encontrado Por: "/>
-                        <h:outputText value="#{HistorialPacientes.selectEps.foundBy}"/>
+                        <h:outputText value="#{Historial.selectObjeto.foundBy}"/>
                         
                         <h:outputText value="Recibe: "/>
-                        <h:inputText value="#{HistorialPacientes.selectEps.reciver}"/>
+                        <h:inputText value="#{Historial.selectObjeto.reciver}"/>
                         
                         <h:outputText value="Carnet del que recibe: "/>
-                        <h:inputText value="#{HistorialPacientes.selectEps.reciverId}"/>
+                        <h:inputText value="#{Historial.selectObjeto.reciverId}"/>
                         
                         <h:outputText value="Devuelve: "/>
-                        <h:inputText value="#{HistorialPacientes.selectEps.returner}"/>
+                        <h:inputText value="#{Historial.selectObjeto.returner}"/>
                         
                         <h:outputText value="Descripcion: "/>
-                        <h:outputText value="#{HistorialPacientes.selectEps.description}"/>
+                        <h:outputText value="#{Historial.selectObjeto.description}"/>
                         
                         <h:outputText value="Fecha encontrado: "/>
-                        <h:outputText value="#{HistorialPacientes.selectEps.foundDate}"/>
+                        <h:outputText value="#{Historial.selectObjeto.foundDate}"/>
                         
                         <h:outputText value="Fecha Devuelto: "/>
-                        <p:calendar minHour="7" maxHour="19" stepMinute="30" value="#{HistorialPacientes.temp.returnDate}" pattern="dd-MM-yyyy HH:mm"/>
+                        <p:calendar minHour="7" maxHour="19" stepMinute="30" value="#{Historial.temp.returnDate}" pattern="dd-MM-yyyy HH:mm"/>
                         
+                        <h:outputText value="Contraseña:" />
+                        <p:password value="#{Historial.pass}"/>
                     </p:panelGrid>
-                    <p:commandButton value="Actualizar" icon="ui-icon-check" update="table" actionListener="#{HistorialPacientes.update()}"/>
+                    <p:commandButton value="Actualizar" icon="ui-icon-check" update="table" actionListener="#{Historial.update()}"/>
                 </p:outputPanel>
             </p:dialog>
         </h:form>

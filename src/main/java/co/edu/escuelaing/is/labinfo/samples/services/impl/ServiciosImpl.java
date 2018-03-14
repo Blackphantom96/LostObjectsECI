@@ -6,11 +6,11 @@
 package co.edu.escuelaing.is.labinfo.samples.services.impl;
 
 import com.google.inject.Inject;
-import co.edu.escuelaing.is.labinfo.persistence.EPS1DAO;
+import co.edu.escuelaing.is.labinfo.persistence.ObjetoDAO;
 import co.edu.escuelaing.is.labinfo.persistence.PersistenceException;
-import co.edu.escuelaing.is.labinfo.samples.entities.Eps1;
-import co.edu.escuelaing.is.labinfo.samples.services.ExcepcionServiciosPacientes;
-import co.edu.escuelaing.is.labinfo.samples.services.ServiciosPacientes;
+import co.edu.escuelaing.is.labinfo.samples.entities.Objeto;
+import co.edu.escuelaing.is.labinfo.samples.services.ExcepcionServicios;
+import co.edu.escuelaing.is.labinfo.samples.services.Servicios;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,36 +23,36 @@ import org.mybatis.guice.transactional.Transactional;
  *
  * @author blackphantom
  */
-public class ServiciosPacienteImpl implements ServiciosPacientes {
+public class ServiciosImpl implements Servicios {
 
     @Inject
-    private EPS1DAO eDAO;
+    private ObjetoDAO eDAO;
 
     @Transactional
     @Override
-    public List<Eps1> obtenerEPSsRegistradas() throws ExcepcionServiciosPacientes {
+    public List<Objeto> obtenerObjetosRegistradas() throws ExcepcionServicios {
         try {
             return eDAO.load();
         } catch (PersistenceException ex) {
-            throw new ExcepcionServiciosPacientes("no se pudo cargar las eps");
+            throw new ExcepcionServicios("no se pudo cargar las Objeto");
         }
     }
 
     @Override
-    public void insertEps(Eps1 e) throws ExcepcionServiciosPacientes{
+    public void insertObjeto(Objeto e) throws ExcepcionServicios{
         try {
             eDAO.save(e);
         } catch (PersistenceException ex) {
-            throw new ExcepcionServiciosPacientes("no se pudo guardar la eps");
+            throw new ExcepcionServicios("no se pudo guardar la Objeto");
         }
     }
 
     @Override
-    public void updateEps(Eps1 e) throws ExcepcionServiciosPacientes {
+    public void updateObjeto(Objeto e) throws ExcepcionServicios {
         try {
             eDAO.update(e);
         } catch (PersistenceException ex) {
-            throw new ExcepcionServiciosPacientes("no se pudo actualizar la eps");
+            throw new ExcepcionServicios("no se pudo actualizar la Objeto");
         }
     }
 

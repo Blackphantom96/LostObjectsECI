@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 hcadavid
+ * Copyright (C) 2015 BlackPhantom96
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ package co.edu.escuelaing.is.labinfo.persistence;
 
 /**
  *
- * @author hcadavid
+ * @author BlackPhantom96
  */
 public class PersistenceException extends Exception {
 
